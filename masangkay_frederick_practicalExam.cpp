@@ -5,26 +5,20 @@
 using namespace std;
 
 int main () {
-    int arr[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int arr[11] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     int n = 10;
     int newElement;
-
-    do{
-        if (n < 20) {
-            
-            cout << "Enter a new value: ";
-            cin >> newElement;
-            
-            arr[n] = newElement;
-            n++;
-
-        }
-        
-        for (int i = 0; i < n; i++) {
-            cout << arr[i] << " ";
-        }
-        cout << endl;
-    }while(n < 20);
     
+    if (n < 11) {
+        cout << "Enter a new value: ";
+        cin >> newElement;
+        
+        arr[n] = newElement;
+        n++;
+    }
+    
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
     return 0;
 }

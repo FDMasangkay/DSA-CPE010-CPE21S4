@@ -1,0 +1,18 @@
+Steps to Solve the Problem:
+1. Generate the Vote Array:
+You will need to generate an array of random values between 1 and 5, where each value corresponds to a vote for a candidate.
+2. Sort the Array:
+Use one of the three sorting techniques (bubble sort, selection sort, or insertion sort) to sort the votes in ascending order. Sorting makes it easier to count the number of votes for each candidate.
+3. Count the Votes:
+Once sorted, iterate through the array and count how many times each candidate's number (1 to 5) appears.
+4. Determine the Winner:
+The candidate with the highest count wins.
+Code Solution:
+Here’s a solution using Insertion Sort, which is suitable for this range of data (values between 1 to 5).
+
+Pseudocode:
+Generate an array of random values between 1 and 5.
+Sort the array using Insertion Sort.
+Count the occurrences of each candidate’s number (1 to 5).
+Output the sorted array and the vote counts for each candidate.
+Determine the candidate with the maximum votes.

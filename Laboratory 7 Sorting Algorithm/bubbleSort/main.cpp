@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>  // For rand() and srand()
 #include <ctime>    // For seeding rand()
-#include "BubbleSort.h"  // Corrected header inclusion
+#include "bubbleSort.h"  // Corrected header inclusion
 
 using namespace std;
 #define ARRAY_SIZE 100

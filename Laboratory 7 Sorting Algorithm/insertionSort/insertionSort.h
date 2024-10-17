@@ -1,30 +1,28 @@
-#ifndef SORTING_H
-#define SORTING_H
+#ifndef INSERTIONSORT_H
+#define INSERTIONSORT_H
 
-// Function prototype for insertion sort
-template <typename T>
-void insertionSort(T arr[], const int N);
-
-// Implement insertion sort in the header (for simplicity)
 template <typename T>
 void insertionSort(T arr[], const int N) {
-    int K = 1, J;
-    T temp;
-    
+    int K = 0, J, temp;
+    // Step 1: Repeat Steps 2 to 5 for K = 1 to N-1
     while (K < N) {
+        // Step 2: set temp = A[K]
         temp = arr[K];
+        // Step 3: set J = K – 1
         J = K - 1;
-
-        // Move elements greater than temp to one position ahead
+        // Step 4: Repeat while temp <= A[J] and J >= 0
         while (J >= 0 && temp < arr[J]) {
+            // set A[J + 1] = A[J]
             arr[J + 1] = arr[J];
+            // set J = J – 1
             J--;
         }
-        
-        // Place temp in the correct position
+        // Step 5: set A[J + 1] = temp
         arr[J + 1] = temp;
+        // [end of loop]
         K++;
     }
+    // Step 6: exit
 }
 
-#endif // SORTING_H
+#endif // INSERTIONSORT_H

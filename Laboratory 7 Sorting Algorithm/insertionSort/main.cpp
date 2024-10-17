@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>  // For rand() and srand()
 #include <ctime>    // For seeding rand()
-#include "selectionSort.h"  // Include the header for selection sort
+#include "insertionSort.h"  // Include the header for insertion sort
 #define ARRAY_SIZE 100
 
 void createRandomArray(int arr[], int size) {
@@ -25,7 +25,7 @@ int main() {
     std::cout << "Unsorted Array:" << std::endl;
     printArray(arr, ARRAY_SIZE);
 
-    selectionSort(arr, ARRAY_SIZE);
+    insertionSort(arr, ARRAY_SIZE);
 
     std::cout << "Sorted Array:" << std::endl;
     printArray(arr, ARRAY_SIZE);

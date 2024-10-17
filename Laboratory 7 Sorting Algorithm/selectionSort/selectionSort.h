@@ -1,39 +1,33 @@
 #ifndef SELECTIONSORT_H
 #define SELECTIONSORT_H
 
-// Function prototype for selection sort
 template <typename T>
-void selectionSort(T arr[], const int N);
-
-// Function to find the position of the smallest element
-template <typename T>
-int Routine_Smallest(T arr[], int K, const int arrSize) {
-    int pos = K;
-    T smallestElem = arr[K];
-
-    for (int j = K + 1; j < arrSize; j++) {
-        if (arr[j] < smallestElem) {
-            smallestElem = arr[j];
-            pos = j;
+int Routine_Smallest(T arr[], int K, const int N) {
+    int POS = K;
+    for (int j = K + 1; j < N; j++) {
+        if (arr[j] < arr[POS]) {
+            POS = j;
         }
     }
-    return pos;
+    return POS;
 }
 
-// Selection sort implementation
 template <typename T>
 void selectionSort(T arr[], const int N) {
-    int pos;
-    T temp;
-    
-    for (int i = 0; i < N - 1; i++) {
-        pos = Routine_Smallest(arr, i, N);
-        if (pos != i) {
-            temp = arr[i];
-            arr[i] = arr[pos];
-            arr[pos] = temp;
-        }
+    int POS, temp, pass = 0;
+    // Step 1: Repeat Steps 2 and 3 for K = 0 to N-1
+    for (int i = 0; i < N; i++) {
+        // Step 2: Call routine smallest(A, K, N, POS)
+        POS = Routine_Smallest(arr, i, N);
+        // Step 3: Swap A[K] with A[POS]
+        temp = arr[i];
+        arr[i] = arr[POS];
+        arr[POS] = temp;
+        // Count
+        pass++;
     }
+    // [End of loop]
+    // Step 4: EXIT
 }
 
-#endif  // SELECTIONSORT_H
+#endif // SELECTIONSORT_H
